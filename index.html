@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Interactive card details form</title>
+	</head>
+	<body>
+		<main class="interactive-card-page">
+			<div class="interactive-card-left">
+				<img
+					src="./images/bg-main-desktop.png"
+					class="interactive-card-bgimage"
+					alt="bg left side"
+				/>
+				<div class="interactive-card-front">
+					<div class="interactive-card-front-circles">
+						<svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+							<path
+								d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+								stroke="#fff"
+							/>
+						</svg>
+					</div>
+					<div class="interactive-card-front-number">0000 0000 0000 0000</div>
+					<div class="interactive-card-front-wrapper">
+						<div class="interactive-card-front-owner">Jane Appleseed</div>
+						<div class="interactive-card-front-date">00/00</div>
+					</div>
+				</div>
+				<div class="interactive-card-back">000</div>
+			</div>
+			<div class="interactive-card-right">
+				<form class="interactive-card-form">
+					<div class="interactive-card-form-element">
+						<label for="name" class="interactive-card-form-element-label">Cardholder Name</label>
+						<input
+							type="text"
+							name="name"
+							class="interactive-card-form-element-input"
+							placeholder="e.g. Jane Appleseed"
+						/>
+					</div>
+					<div class="interactive-card-form-element">
+						<label for="number" class="interactive-card-form-element-label">Card Number</label>
+						<input
+							type="number"
+							name="number"
+							class="interactive-card-form-element-input"
+							placeholder="e.g. 1234 5678 9123 0000"
+						/>
+					</div>
+					<div class="interactive-card-form-element-col">
+						<div class="interactive-card-form-element">
+							<label for="month" class="interactive-card-form-element-label"
+								>Exp. Date (MM/YY)</label
+							>
+							<div class="wrapper">
+								<input
+									type="month"
+									name="month"
+									class="interactive-card-form-element-input"
+									placeholder="MM"
+									min="12"
+								/>
+								<input
+									type="year"
+									name="year"
+									class="interactive-card-form-element-input"
+									placeholder="YY"
+								/>
+							</div>
+						</div>
+						<div class="interactive-card-form-element">
+							<label for="cvc" class="interactive-card-form-element-label">CVC</label>
+							<input
+								type="password"
+								name="cvc"
+								class="interactive-card-from-element-input"
+								placeholder="e.g. 123"
+							/>
+						</div>
+					</div>
+					<div class="interactive-card-form-element">
+						<button class="interactive-card-form-button">Confirm</button>
+					</div>
+				</form>
+			</div>
+		</main>
+
+		<!--  
+  Cardholder Name
+  e.g. Jane Appleseed
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+   ////Completed state start 
+
+  Thank you!
+  We've added your card details
+  Continue -->
+	</body>
+</html>
