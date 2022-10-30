@@ -81,6 +81,9 @@ label {
 	flex-direction: column;
 	row-gap: 5px;
 }
+.interactive-card-form-element-col {
+	flex-direction: row;
+}
 .interactive-card-form-button {
 	display: block;
 	width: 100%;
@@ -93,7 +96,6 @@ label {
 .interactive-card-form-button:hover {
 	transform: scale(0.98);
 }
-
 .wrapper {
 	display: grid;
 	grid-template-columns: 80px 80px;
