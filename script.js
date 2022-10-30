@@ -37,6 +37,7 @@ form.addEventListener('submit', (event) => {
 	cardCvc.innerHTML = formCvc.value;
 	Hide(form);
 	Show(complete);
+	form.reset();
 });
 completeButton.addEventListener('click', (eve) => {
 	Hide(complete);
