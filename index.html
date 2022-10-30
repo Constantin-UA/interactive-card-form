@@ -12,11 +12,10 @@
 	<body>
 		<main class="interactive-card-page">
 			<div class="interactive-card-left">
-				<img
-					src="./images/bg-main-desktop.png"
-					class="interactive-card-bgimage"
-					alt="bg left side"
-				/>
+				<picture class="interactive-card-bgimage">
+					<source srcset="./images/bg-main-mobile.png" media="(max-width:376px)" />
+					<img src="./images/bg-main-desktop.png" alt="bg left side" />
+				</picture>
 				<div class="interactive-card-front">
 					<div class="interactive-card-front-circles">
 						<svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +39,8 @@
 					<div class="interactive-card-form-element">
 						<label for="name" class="interactive-card-form-element-label">Cardholder Name</label>
 						<input
+							require
+							id="name-owner"
 							type="text"
 							name="name"
 							class="interactive-card-form-element-input"
@@ -49,7 +50,9 @@
 					<div class="interactive-card-form-element">
 						<label for="number" class="interactive-card-form-element-label">Card Number</label>
 						<input
-							type="number"
+							require
+							id="number-card"
+							type="text"
 							name="number"
 							class="interactive-card-form-element-input"
 							placeholder="e.g. 1234 5678 9123 0000"
@@ -62,13 +65,18 @@
 							>
 							<div class="wrapper">
 								<input
-									type="month"
+									require
+									id="month"
+									type="number"
 									name="month"
 									class="interactive-card-form-element-input"
 									placeholder="MM"
-									min="12"
+									min="1"
+									max="12"
 								/>
 								<input
+									require
+									id="year"
 									type="year"
 									name="year"
 									class="interactive-card-form-element-input"
@@ -79,6 +87,8 @@
 						<div class="interactive-card-form-element">
 							<label for="cvc" class="interactive-card-form-element-label">CVC</label>
 							<input
+								require
+								id="cvc"
 								type="password"
 								name="cvc"
 								class="interactive-card-from-element-input"
@@ -90,28 +100,20 @@
 						<button class="interactive-card-form-button">Confirm</button>
 					</div>
 				</form>
+				<div class="interactive-card-complete hide">
+					<div class="interactive-card-complete-element">
+						<img
+							src="./images/icon-complete.svg"
+							alt="complete"
+							class="interactive-card-complete-img"
+						/>
+					</div>
+					<h1 class="interactive-card-complete-title">Thank you!</h1>
+					<p class="interactive-card-complete-text">We`ve added your card details</p>
+					<button class="interactive-card-complete-button">Continue</button>
+				</div>
 			</div>
 		</main>
-
-		<!--  
-  Cardholder Name
-  e.g. Jane Appleseed
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-   ////Completed state start 
-
-  Thank you!
-  We've added your card details
-  Continue -->
+		<script src="./script.js"></script>
 	</body>
 </html>
