@@ -41,7 +41,6 @@
 							>Cardholder Name</label
 						>
 						<input
-							require="true"
 							id="name-owner"
 							type="text"
 							name="name"
@@ -79,10 +78,12 @@
 								/>
 								<input
 									id="year"
-									type="year"
+									type="number"
 									name="year"
 									class="interactive-card-form-element-input"
 									placeholder="YY"
+									min="00"
+									max="99"
 									required
 								/>
 							</div>
